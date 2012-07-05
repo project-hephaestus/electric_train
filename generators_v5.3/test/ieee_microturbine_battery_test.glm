@@ -1,0 +1,247 @@
+
+
+clock {
+	timestamp '2000-01-01 0:00:00';
+	timezone EST+5EDT;
+}
+
+module powerflow;
+module generators;
+module tape;
+module climate;
+
+object climate {
+	tmyfile WA-Seattle.tmy2;
+
+}
+object overhead_line_conductor:100 {
+	geometric_mean_radius 0.0244;
+	resistance 0.306;
+}
+
+object overhead_line_conductor:101 {
+	geometric_mean_radius 0.00814;
+	resistance 0.592;
+}
+
+object line_spacing:200 {
+	          distance_AB 2.500000;
+		 distance_BC 4.500000;
+		 distance_AC 7.000000;
+		 distance_AN 5.656854;
+		 distance_BN 4.272002;
+	          distance_CN 5.0;
+
+	
+}
+
+object line_configuration:300 {
+	 conductor_A overhead_line_conductor:100;
+	 conductor_B overhead_line_conductor:100;
+	 conductor_C overhead_line_conductor:100;
+	 conductor_N overhead_line_conductor:101;
+	 spacing line_spacing:200;
+}
+
+object transformer_configuration:400 {
+	connect_type 1;
+	power_rating 6000;
+	primary_voltage 12470;
+	secondary_voltage 600;
+	resistance 0.01;
+	reactance 0.06;
+}
+
+object node {
+	name node1;
+	phases "ABCN";
+	 voltage_A +7199.558+0.000j;
+	 voltage_B -3599.779-6235.000j;
+	 voltage_C -3599.779+6235.000j;
+	  nominal_voltage 1200;
+}
+
+object overhead_line {
+	name overline12;
+	phases "ABCN";
+	from node1;
+	to node2;
+	length 2000;
+	configuration line_configuration:300;
+}
+
+object node {
+	name node2;
+	phases "ABCN";
+	 voltage_A +7199.558+0.000j;
+	 voltage_B -3599.779-6235.000j;
+	 voltage_C -3599.779+6235.000j;
+	  nominal_voltage 1200;
+}
+
+object transformer {
+	name trans23;
+	phases "ABCN";
+	from node2;
+	to node3;
+	configuration transformer_configuration:400;
+}
+
+
+object node {
+	name node3;
+	phases "ABCN";
+	 voltage_A 346.410;
+	 voltage_B -173.205 ;
+	 voltage_C -173.205 ;
+	  nominal_voltage 1200;
+}
+
+object overhead_line {
+	name OHL3L;
+	phases "ABCN";
+	from node3;
+	to load1;
+	length 2500;
+	configuration line_configuration:300;
+}
+
+object load {
+	name load1;
+	phases "ABCN";
+	 voltage_A 346.410;
+	 voltage_B -173.205 ;
+	 voltage_C -173.205;
+	  nominal_voltage 1200;
+	
+}
+
+
+object inverter {
+	parent node4;
+	generator_status 1;
+	inverter_type 3;
+	generator_mode SUPPLY_DRIVEN;
+	name inv;
+}
+
+object battery {
+	parent inv;
+	
+	name b;
+}
+
+object rectifier {
+	parent b;
+	
+	name r;
+}
+
+object microturbine {
+	parent r;
+	
+	name m;
+}
+
+object meter {
+	name node4;
+	
+	nominal_voltage 600;	
+	
+}
+
+object overhead_line {
+	name OHL34;
+	phases "ABCN";
+	from node3;
+	to node4;
+	length 25;
+	configuration line_configuration:300;
+}
+
+object recorder {
+	parent load1;
+	property phaseA_V,phaseA_VA;
+	file mbt\test3.txt;
+	interval 3600;
+	limit 20;
+}
+	
+
+
+object recorder {
+	parent node3;
+	property phaseA_V,phaseB_V,phaseC_V,power_in;
+	file mbt\node3_test_v.txt;
+	interval 3600;
+	limit 20;
+}
+
+
+
+
+object recorder {
+	parent node4;
+	property power_in,phaseA_V,phaseB_V,phaseC_V;
+	file mbt\test_node_4v.txt;
+	interval 3600;
+	limit 20;
+}
+
+object recorder {
+	parent node4;
+	property power,line1_current,line2_current,line3_current;
+	file mbt\test_node_4i.txt;
+	interval 3600;
+	limit 20;
+}
+
+
+object recorder {
+	parent inv;
+	property VA_In,I_In,V_In;
+	file mbt\inverter_testin.txt;
+	interval 3600;
+	limit 20;
+}
+
+object recorder {
+	parent inv;
+	property phaseA_V_Out,phaseB_V_Out,phaseC_V_Out,phaseA_I_Out,phaseB_I_Out,phaseC_I_Out;
+	file mbt\inverter_testout.txt;
+	interval 3600;
+	limit 20;
+}
+
+object recorder {
+	parent r;
+	property phaseA_VA_In,phaseB_VA_In,phaseC_VA_In,VA_Out,I_Out,V_Out;
+	file mbt\rectifier_testin.txt;
+	interval 3600;
+	limit 20;
+}
+
+
+object recorder {
+	parent r;
+	property phaseA_V_In,phaseB_V_In,phaseC_V_In,phaseA_I_In,phaseB_I_In,phaseC_I_In;
+	file mbt\rectifier_testout.txt;
+	interval 3600;
+	limit 20;
+}
+
+object recorder {
+	parent b;
+	property VA_Out,I_Out,V_Out,V_In,I_In,Energy;
+	file mbt\battery_tests.txt;
+	interval 3600;
+	limit 20;
+}
+
+object recorder {
+	parent m;
+	property VA_Out,phaseA_VA_Out,phaseB_VA_Out,phaseC_VA_Out,frequency;
+	file mbt\microturbine_tests.txt;
+	interval 3600;
+	limit 20;
+}

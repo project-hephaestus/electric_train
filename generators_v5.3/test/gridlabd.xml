@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://www.gridlabd.org/gridlabd-2_2.xsl" type="text/xsl"?>
+<gridlabd>
+	<version.major>2</version.major>
+	<version.minor>2</version.minor>
+	<command_line>"gridlabd ieee_microturbine_battery_test.glm"</command_line>
+	<environment>batch</environment>
+	<quiet>0</quiet>
+	<warn>1</warn>
+	<debugger>0</debugger>
+	<gdb>0</gdb>
+	<debug>0</debug>
+	<test>0</test>
+	<verbose>0</verbose>
+	<iteration_limit>100</iteration_limit>
+	<workdir>C:\Users\antonia\Documents\GridLAB-D\module\generators_v4\test</workdir>
+	<dumpfile>gridlabd.xml</dumpfile>
+	<savefile>""</savefile>
+	<dumpall>0</dumpall>
+	<runchecks>0</runchecks>
+	<threadcount>1</threadcount>
+	<profiler>0</profiler>
+	<pauseatexit>0</pauseatexit>
+	<testoutputfile>test.txt</testoutputfile>
+	<xml_encoding>8</xml_encoding>
+	<clock>2000-01-01 03:00:00 EST</clock>
+	<starttime>2012-07-03 15:43:31 EDT</starttime>
+	<stoptime>NEVER</stoptime>
+	<double_format>%+lg</double_format>
+	<complex_format>%+lg%+lg%c</complex_format>
+	<object_format>%s:%d</object_format>
+	<object_scan>%[^:]:%d</object_scan>
+	<object_tree_balance>FALSE</object_tree_balance>
+	<kmlfile>""</kmlfile>
+	<modelname>ieee_microturbine_battery_test.glm</modelname>
+	<execdir>gridlabd</execdir>
+	<strictnames>TRUE</strictnames>
+	<website>http://www.gridlabd.org/</website>
+	<urlbase>http://www.gridlabd.org/</urlbase>
+	<randomseed>0</randomseed>
+	<include>"C:\Program Files\GridLAB-D"</include>
+	<trace>""</trace>
+	<gdb_window>0</gdb_window>
+	<tmp>C:\Users\antonia\AppData\Roaming\temp\gridlabd</tmp>
+	<force_compile>0</force_compile>
+	<nolocks>0</nolocks>
+	<skipsafe>0</skipsafe>
+	<dateformat>ISO</dateformat>
+	<minimum_timestep>1</minimum_timestep>
+	<platform>WINDOWS</platform>
+	<suppress_repeat_messages>1</suppress_repeat_messages>
+	<maximum_synctime>60</maximum_synctime>
+	<run_realtime>0</run_realtime>
+	<no_deprecate>1</no_deprecate>
+	<streaming_io>0</streaming_io>
+	<compileonly>0</compileonly>
+	<relax_naming_rules>0</relax_naming_rules>
+	<server_portnum>10000</server_portnum>
+	<show_progress>1</show_progress>
+	<timezone>EST5EDT</timezone>
+	<sync-order>
+	</sync-order>
+	<powerflow>
+		<version.major>2</version.major>
+		<version.minor>0</version.minor>
+		<node_list>
+			<inherits_from>powerflow_object</inherits_from>
+			<node>
+				<id>6</id>
+				<rank>8</rank>
+				<out_svc>NEVER</out_svc>
+				<name>node1</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0.0012 V</maximum_voltage_error>
+				<voltage_A>+7199.56+0d V</voltage_A>
+				<voltage_B>+7199.56-120d V</voltage_B>
+				<voltage_C>+7199.56+120d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<NR_mode>FALSE</NR_mode>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</node>
+			<node>
+				<id>8</id>
+				<rank>6</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>overline12</parent>
+				<name>node2</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0.0012 V</maximum_voltage_error>
+				<voltage_A>+7199.56+0d V</voltage_A>
+				<voltage_B>+7199.56-120d V</voltage_B>
+				<voltage_C>+7199.56+120d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<NR_mode>FALSE</NR_mode>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</node>
+			<node>
+				<id>10</id>
+				<rank>4</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>trans23</parent>
+				<name>node3</name>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0.0012 V</maximum_voltage_error>
+				<voltage_A>+346.41+0d V</voltage_A>
+				<voltage_B>+173.205+180d V</voltage_B>
+				<voltage_C>+173.205+180d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<NR_mode>FALSE</NR_mode>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</node>
+		</node_list>
+		<link_list>
+			<inherits_from>powerflow_object</inherits_from>
+		</link_list>
+		<capacitor_list>
+			<inherits_from>node</inherits_from>
+		</capacitor_list>
+		<fuse_list>
+			<inherits_from>link</inherits_from>
+		</fuse_list>
+		<meter_list>
+			<inherits_from>node</inherits_from>
+			<meter>
+				<id>14</id>
+				<rank>2</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>OHL34</parent>
+				<name>node4</name>
+				<measured_real_energy>+0 Wh</measured_real_energy>
+				<measured_reactive_energy>+0 VAh</measured_reactive_energy>
+				<measured_power>+0+0j VA</measured_power>
+				<measured_power_A>+0+0i VA</measured_power_A>
+				<measured_power_B>+0+0i VA</measured_power_B>
+				<measured_power_C>+0+0i VA</measured_power_C>
+				<measured_demand>+0 W</measured_demand>
+				<measured_real_power>+0 W</measured_real_power>
+				<measured_reactive_power>+0 VAr</measured_reactive_power>
+				<meter_power_consumption>+0+0j VA</meter_power_consumption>
+				<measured_voltage_A>+0+0d V</measured_voltage_A>
+				<measured_voltage_B>+0+0d V</measured_voltage_B>
+				<measured_voltage_C>+0+0d V</measured_voltage_C>
+				<measured_voltage_AB>+0+0d V</measured_voltage_AB>
+				<measured_voltage_BC>+0+0d V</measured_voltage_BC>
+				<measured_voltage_CA>+0+0d V</measured_voltage_CA>
+				<measured_current_A>+0+0j A</measured_current_A>
+				<measured_current_B>+0+0j A</measured_current_B>
+				<measured_current_C>+0+0j A</measured_current_C>
+				<customer_interrupted>FALSE</customer_interrupted>
+				<customer_interrupted_secondary>FALSE</customer_interrupted_secondary>
+				<monthly_bill>+0</monthly_bill>
+				<previous_monthly_bill>+0</previous_monthly_bill>
+				<previous_monthly_energy>+0 kWh</previous_monthly_energy>
+				<monthly_fee>+0</monthly_fee>
+				<monthly_energy>+0 kWh</monthly_energy>
+				<bill_mode>NONE</bill_mode>
+				<bill_day>15</bill_day>
+				<price>+0</price>
+				<price_base>+0</price_base>
+				<first_tier_price>+0</first_tier_price>
+				<first_tier_energy>+0 kWh</first_tier_energy>
+				<second_tier_price>+0</second_tier_price>
+				<second_tier_energy>+0 kWh</second_tier_energy>
+				<third_tier_price>+0</third_tier_price>
+				<third_tier_energy>+0 kWh</third_tier_energy>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0.0006 V</maximum_voltage_error>
+				<voltage_A>+346.41+0d V</voltage_A>
+				<voltage_B>+173.205+180d V</voltage_B>
+				<voltage_C>+173.205+180d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<NR_mode>FALSE</NR_mode>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<phases>ABCN</phases>
+				<nominal_voltage>+600 V</nominal_voltage>
+			</meter>
+		</meter_list>
+		<line_list>
+			<inherits_from>link</inherits_from>
+		</line_list>
+		<line_spacing_list>
+			<line_spacing>
+				<id>3</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_spacing:3)</name>
+				<distance_AB>+2.5 ft</distance_AB>
+				<distance_BC>+4.5 ft</distance_BC>
+				<distance_AC>+7 ft</distance_AC>
+				<distance_AN>+5.65685 ft</distance_AN>
+				<distance_BN>+4.272 ft</distance_BN>
+				<distance_CN>+5 ft</distance_CN>
+			</line_spacing>
+		</line_spacing_list>
+		<overhead_line_list>
+			<inherits_from>line</inherits_from>
+			<overhead_line>
+				<id>7</id>
+				<rank>7</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node1</parent>
+				<name>overline12</name>
+				<configuration>line_configuration:4</configuration>
+				<length>+2000 ft</length>
+				<status>CLOSED</status>
+				<from>node1</from>
+				<to>node2</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>11</id>
+				<rank>2</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node3</parent>
+				<name>OHL3L</name>
+				<configuration>line_configuration:4</configuration>
+				<length>+2500 ft</length>
+				<status>CLOSED</status>
+				<from>node3</from>
+				<to>load1</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</overhead_line>
+			<overhead_line>
+				<id>15</id>
+				<rank>3</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node3</parent>
+				<name>OHL34</name>
+				<configuration>line_configuration:4</configuration>
+				<length>+25 ft</length>
+				<status>CLOSED</status>
+				<from>node3</from>
+				<to>node4</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</overhead_line>
+		</overhead_line_list>
+		<underground_line_list>
+			<inherits_from>line</inherits_from>
+		</underground_line_list>
+		<overhead_line_conductor_list>
+			<overhead_line_conductor>
+				<id>1</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(overhead_line_conductor:1)</name>
+				<geometric_mean_radius>+0.0244 ft</geometric_mean_radius>
+				<resistance>+0.306 Ohm/mile</resistance>
+				<rating.summer.continuous>+0 A</rating.summer.continuous>
+				<rating.summer.emergency>+0 A</rating.summer.emergency>
+				<rating.winter.continuous>+0 A</rating.winter.continuous>
+				<rating.winter.emergency>+0 A</rating.winter.emergency>
+			</overhead_line_conductor>
+			<overhead_line_conductor>
+				<id>2</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(overhead_line_conductor:2)</name>
+				<geometric_mean_radius>+0.00814 ft</geometric_mean_radius>
+				<resistance>+0.592 Ohm/mile</resistance>
+				<rating.summer.continuous>+0 A</rating.summer.continuous>
+				<rating.summer.emergency>+0 A</rating.summer.emergency>
+				<rating.winter.continuous>+0 A</rating.winter.continuous>
+				<rating.winter.emergency>+0 A</rating.winter.emergency>
+			</overhead_line_conductor>
+		</overhead_line_conductor_list>
+		<underground_line_conductor_list>
+		</underground_line_conductor_list>
+		<line_configuration_list>
+			<line_configuration>
+				<id>4</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(line_configuration:4)</name>
+				<conductor_A>overhead_line_conductor:1</conductor_A>
+				<conductor_B>overhead_line_conductor:1</conductor_B>
+				<conductor_C>overhead_line_conductor:1</conductor_C>
+				<conductor_N>overhead_line_conductor:2</conductor_N>
+				<spacing>line_spacing:3</spacing>
+				<z11>+0+0j Ohm/mile</z11>
+				<z12>+0+0j Ohm/mile</z12>
+				<z13>+0+0j Ohm/mile</z13>
+				<z21>+0+0j Ohm/mile</z21>
+				<z22>+0+0j Ohm/mile</z22>
+				<z23>+0+0j Ohm/mile</z23>
+				<z31>+0+0j Ohm/mile</z31>
+				<z32>+0+0j Ohm/mile</z32>
+				<z33>+0+0j Ohm/mile</z33>
+			</line_configuration>
+		</line_configuration_list>
+		<relay_list>
+			<inherits_from>link</inherits_from>
+		</relay_list>
+		<transformer_configuration_list>
+			<transformer_configuration>
+				<id>5</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<name>(transformer_configuration:5)</name>
+				<connect_type>WYE_WYE</connect_type>
+				<install_type>UNKNOWN</install_type>
+				<primary_voltage>+12470 V</primary_voltage>
+				<secondary_voltage>+600 V</secondary_voltage>
+				<power_rating>+6000 kVA</power_rating>
+				<powerA_rating>+2000 kVA</powerA_rating>
+				<powerB_rating>+2000 kVA</powerB_rating>
+				<powerC_rating>+2000 kVA</powerC_rating>
+				<resistance>+0.01 pu</resistance>
+				<reactance>+0.06 pu</reactance>
+				<impedance>+0.01+0.06j pu</impedance>
+				<resistance1>+0 pu</resistance1>
+				<reactance1>+0 pu</reactance1>
+				<impedance1>+0+0j pu</impedance1>
+				<resistance2>+0 pu</resistance2>
+				<reactance2>+0 pu</reactance2>
+				<impedance2>+0+0j pu</impedance2>
+				<shunt_resistance>+1e+009 pu</shunt_resistance>
+				<shunt_reactance>+1e+009 pu</shunt_reactance>
+				<shunt_impedance>+1e+009+1e+009j pu</shunt_impedance>
+			</transformer_configuration>
+		</transformer_configuration_list>
+		<transformer_list>
+			<inherits_from>link</inherits_from>
+			<transformer>
+				<id>9</id>
+				<rank>5</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node2</parent>
+				<name>trans23</name>
+				<configuration>transformer_configuration:5</configuration>
+				<status>CLOSED</status>
+				<from>node2</from>
+				<to>node3</to>
+				<power_in>+0+0j VA</power_in>
+				<power_out>+0+0j VA</power_out>
+				<power_out_real>+0 W</power_out_real>
+				<power_losses>+0+0j VA</power_losses>
+				<power_in_A>+0+0j VA</power_in_A>
+				<power_in_B>+0+0j VA</power_in_B>
+				<power_in_C>+0+0j VA</power_in_C>
+				<power_out_A>+0+0j VA</power_out_A>
+				<power_out_B>+0+0j VA</power_out_B>
+				<power_out_C>+0+0j VA</power_out_C>
+				<power_losses_A>+0+0j VA</power_losses_A>
+				<power_losses_B>+0+0j VA</power_losses_B>
+				<power_losses_C>+0+0j VA</power_losses_C>
+				<current_out_A>+0+0i A</current_out_A>
+				<current_out_B>+0+0i A</current_out_B>
+				<current_out_C>+0+0i A</current_out_C>
+				<current_in_A>+0+0i A</current_in_A>
+				<current_in_B>+0+0i A</current_in_B>
+				<current_in_C>+0+0i A</current_in_C>
+				<fault_current_in_A>+0+0j A</fault_current_in_A>
+				<fault_current_in_B>+0+0j A</fault_current_in_B>
+				<fault_current_in_C>+0+0j A</fault_current_in_C>
+				<fault_current_out_A>+0+0j A</fault_current_out_A>
+				<fault_current_out_B>+0+0j A</fault_current_out_B>
+				<fault_current_out_C>+0+0j A</fault_current_out_C>
+				<flow_direction>UNKNOWN</flow_direction>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</transformer>
+		</transformer_list>
+		<load_list>
+			<inherits_from>node</inherits_from>
+			<load>
+				<id>12</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>OHL3L</parent>
+				<name>load1</name>
+				<load_class>U</load_class>
+				<constant_power_A>+0+0i VA</constant_power_A>
+				<constant_power_B>+0+0i VA</constant_power_B>
+				<constant_power_C>+0+0i VA</constant_power_C>
+				<constant_power_A_real>+0 W</constant_power_A_real>
+				<constant_power_B_real>+0 W</constant_power_B_real>
+				<constant_power_C_real>+0 W</constant_power_C_real>
+				<constant_power_A_reac>+0 VAr</constant_power_A_reac>
+				<constant_power_B_reac>+0 VAr</constant_power_B_reac>
+				<constant_power_C_reac>+0 VAr</constant_power_C_reac>
+				<constant_current_A>+0+0i A</constant_current_A>
+				<constant_current_B>+0+0i A</constant_current_B>
+				<constant_current_C>+0+0i A</constant_current_C>
+				<constant_current_A_real>+0 A</constant_current_A_real>
+				<constant_current_B_real>+0 A</constant_current_B_real>
+				<constant_current_C_real>+0 A</constant_current_C_real>
+				<constant_current_A_reac>+0 A</constant_current_A_reac>
+				<constant_current_B_reac>+0 A</constant_current_B_reac>
+				<constant_current_C_reac>+0 A</constant_current_C_reac>
+				<constant_impedance_A>+0+0i Ohm</constant_impedance_A>
+				<constant_impedance_B>+0+0i Ohm</constant_impedance_B>
+				<constant_impedance_C>+0+0i Ohm</constant_impedance_C>
+				<constant_impedance_A_real>+0 Ohm</constant_impedance_A_real>
+				<constant_impedance_B_real>+0 Ohm</constant_impedance_B_real>
+				<constant_impedance_C_real>+0 Ohm</constant_impedance_C_real>
+				<constant_impedance_A_reac>+0 Ohm</constant_impedance_A_reac>
+				<constant_impedance_B_reac>+0 Ohm</constant_impedance_B_reac>
+				<constant_impedance_C_reac>+0 Ohm</constant_impedance_C_reac>
+				<measured_voltage_A>+0+0i</measured_voltage_A>
+				<measured_voltage_B>+0+0i</measured_voltage_B>
+				<measured_voltage_C>+0+0i</measured_voltage_C>
+				<measured_voltage_AB>+0+0i</measured_voltage_AB>
+				<measured_voltage_BC>+0+0i</measured_voltage_BC>
+				<measured_voltage_CA>+0+0i</measured_voltage_CA>
+				<phase_loss_protection>FALSE</phase_loss_protection>
+				<base_power_A>+0 VA</base_power_A>
+				<base_power_B>+0 VA</base_power_B>
+				<base_power_C>+0 VA</base_power_C>
+				<power_pf_A>+1 pu</power_pf_A>
+				<current_pf_A>+1 pu</current_pf_A>
+				<impedance_pf_A>+1 pu</impedance_pf_A>
+				<power_pf_B>+1 pu</power_pf_B>
+				<current_pf_B>+1 pu</current_pf_B>
+				<impedance_pf_B>+1 pu</impedance_pf_B>
+				<power_pf_C>+1 pu</power_pf_C>
+				<current_pf_C>+1 pu</current_pf_C>
+				<impedance_pf_C>+1 pu</impedance_pf_C>
+				<power_fraction_A>+0 pu</power_fraction_A>
+				<current_fraction_A>+0 pu</current_fraction_A>
+				<impedance_fraction_A>+0 pu</impedance_fraction_A>
+				<power_fraction_B>+0 pu</power_fraction_B>
+				<current_fraction_B>+0 pu</current_fraction_B>
+				<impedance_fraction_B>+0 pu</impedance_fraction_B>
+				<power_fraction_C>+0 pu</power_fraction_C>
+				<current_fraction_C>+0 pu</current_fraction_C>
+				<impedance_fraction_C>+0 pu</impedance_fraction_C>
+				<bustype>PQ</bustype>
+				<busflags>HASSOURCE</busflags>
+				<maximum_voltage_error>+0.0012 V</maximum_voltage_error>
+				<voltage_A>+346.41+0d V</voltage_A>
+				<voltage_B>+173.205+180d V</voltage_B>
+				<voltage_C>+173.205+180d V</voltage_C>
+				<voltage_AB>+0+0d V</voltage_AB>
+				<voltage_BC>+0+0d V</voltage_BC>
+				<voltage_CA>+0+0d V</voltage_CA>
+				<current_A>+0+0i A</current_A>
+				<current_B>+0+0i A</current_B>
+				<current_C>+0+0i A</current_C>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<shunt_A>+0+0i S</shunt_A>
+				<shunt_B>+0+0i S</shunt_B>
+				<shunt_C>+0+0i S</shunt_C>
+				<NR_mode>FALSE</NR_mode>
+				<mean_repair_time>+0 s</mean_repair_time>
+				<service_status>IN_SERVICE</service_status>
+				<phases>ABCN</phases>
+				<nominal_voltage>+1200 V</nominal_voltage>
+			</load>
+		</load_list>
+		<regulator_configuration_list>
+		</regulator_configuration_list>
+		<regulator_list>
+			<inherits_from>link</inherits_from>
+		</regulator_list>
+		<triplex_node_list>
+			<inherits_from>powerflow_object</inherits_from>
+		</triplex_node_list>
+		<triplex_meter_list>
+			<inherits_from>triplex_node</inherits_from>
+		</triplex_meter_list>
+		<triplex_line_list>
+			<inherits_from>line</inherits_from>
+		</triplex_line_list>
+		<triplex_line_configuration_list>
+		</triplex_line_configuration_list>
+		<triplex_line_conductor_list>
+		</triplex_line_conductor_list>
+		<switch_list>
+			<inherits_from>link</inherits_from>
+		</switch_list>
+		<substation_list>
+			<inherits_from>node</inherits_from>
+		</substation_list>
+		<pqload_list>
+			<inherits_from>load</inherits_from>
+		</pqload_list>
+		<voltdump_list>
+		</voltdump_list>
+		<series_reactor_list>
+			<inherits_from>link</inherits_from>
+		</series_reactor_list>
+		<restoration_list>
+		</restoration_list>
+		<frequency_gen_list>
+		</frequency_gen_list>
+		<volt_var_control_list>
+		</volt_var_control_list>
+		<fault_check_list>
+		</fault_check_list>
+		<motor_list>
+			<inherits_from>node</inherits_from>
+		</motor_list>
+		<billdump_list>
+		</billdump_list>
+		<power_metrics_list>
+		</power_metrics_list>
+		<currdump_list>
+		</currdump_list>
+		<recloser_list>
+			<inherits_from>switch</inherits_from>
+		</recloser_list>
+		<sectionalizer_list>
+			<inherits_from>switch</inherits_from>
+		</sectionalizer_list>
+		<emissions_list>
+		</emissions_list>
+	</powerflow>
+	<generators>
+		<version.major>1</version.major>
+		<version.minor>3</version.minor>
+		<diesel_dg_list>
+		</diesel_dg_list>
+		<windturb_dg_list>
+		</windturb_dg_list>
+		<power_electronics_list>
+		</power_electronics_list>
+		<energy_storage_list>
+		</energy_storage_list>
+		<inverter_list>
+			<inverter>
+				<id>13</id>
+				<rank>1</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node4</parent>
+				<name>inv</name>
+				<inverter_type>PWM</inverter_type>
+				<generator_status>OFFLINE</generator_status>
+				<generator_mode>SUPPLY_DRIVEN</generator_mode>
+				<V_In>+0+0d V</V_In>
+				<I_In>+0+0i A</I_In>
+				<VA_In>+0+0i VA</VA_In>
+				<Vdc>+480+3.87842e-320d V</Vdc>
+				<phaseA_V_Out>+0+0d V</phaseA_V_Out>
+				<phaseB_V_Out>+0+0d V</phaseB_V_Out>
+				<phaseC_V_Out>+0+0d V</phaseC_V_Out>
+				<phaseA_I_Out>+0+0d V</phaseA_I_Out>
+				<phaseB_I_Out>+0+0d V</phaseB_I_Out>
+				<phaseC_I_Out>+0+0d V</phaseC_I_Out>
+				<power_A>+0+0i VA</power_A>
+				<power_B>+0+0i VA</power_B>
+				<power_C>+0+0i VA</power_C>
+				<P_Out>+1200 VA</P_Out>
+				<Q_Out>+500 VAr</Q_Out>
+				<power_factor>+1 unit</power_factor>
+			</inverter>
+		</inverter_list>
+		<dc_dc_converter_list>
+		</dc_dc_converter_list>
+		<rectifier_list>
+		</rectifier_list>
+		<microturbine_list>
+		</microturbine_list>
+		<battery_list>
+		</battery_list>
+		<solar_list>
+		</solar_list>
+		<solar_train_list>
+		</solar_train_list>
+		<energy_consumption_list>
+		</energy_consumption_list>
+	</generators>
+	<tape>
+		<version.major>2</version.major>
+		<version.minor>0</version.minor>
+		<player_list>
+		</player_list>
+		<shaper_list>
+		</shaper_list>
+		<recorder_list>
+			<recorder>
+				<id>16</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>load1</parent>
+				<name>(recorder:16)</name>
+				<property>phaseA_V,phaseA_VA</property>
+				<trigger>""</trigger>
+				<file>mbt\test3.txt</file>
+				<multifile>""</multifile>
+				<limit>20</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+3600 s</interval>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>17</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node3</parent>
+				<name>(recorder:17)</name>
+				<property>phaseA_V,phaseB_V,phaseC_V,power_in</property>
+				<trigger>""</trigger>
+				<file>mbt\node3_test_v.txt</file>
+				<multifile>""</multifile>
+				<limit>20</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+3600 s</interval>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>18</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node4</parent>
+				<name>(recorder:18)</name>
+				<property>power_in,phaseA_V,phaseB_V,phaseC_V</property>
+				<trigger>""</trigger>
+				<file>mbt\test_node_4v.txt</file>
+				<multifile>""</multifile>
+				<limit>20</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+3600 s</interval>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>19</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>node4</parent>
+				<name>(recorder:19)</name>
+				<property>power,line1_current,line2_current,line3_current</property>
+				<trigger>""</trigger>
+				<file>mbt\test_node_4i.txt</file>
+				<multifile>""</multifile>
+				<limit>20</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+3600 s</interval>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>20</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>inv</parent>
+				<name>(recorder:20)</name>
+				<property>VA_In,I_In,V_In</property>
+				<trigger>""</trigger>
+				<file>mbt\inverter_testin.txt</file>
+				<multifile>""</multifile>
+				<limit>20</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+3600 s</interval>
+				<output>SCREEN</output>
+			</recorder>
+			<recorder>
+				<id>21</id>
+				<rank>0</rank>
+				<out_svc>NEVER</out_svc>
+				<parent>inv</parent>
+				<name>(recorder:21)</name>
+				<property>phaseA_V_Out,phaseB_V_Out,phaseC_V_Out,phaseA_I_Out,phaseB_I_Out,phaseC_I_Out</property>
+				<trigger>""</trigger>
+				<file>mbt\inverter_testout.txt</file>
+				<multifile>""</multifile>
+				<limit>20</limit>
+				<plotcommands>""</plotcommands>
+				<xdata>""</xdata>
+				<columns>""</columns>
+				<interval>+3600 s</interval>
+				<output>SCREEN</output>
+			</recorder>
+		</recorder_list>
+		<multi_recorder_list>
+		</multi_recorder_list>
+		<collector_list>
+		</collector_list>
+		<histogram_list>
+		</histogram_list>
+	</tape>
+	<climate>
+		<version.major>2</version.major>
+		<version.minor>0</version.minor>
+		<climate_list>
+			<climate>
+				<id>0</id>
+				<rank>0</rank>
+				<latitude>47.450000</latitude>
+				<longitude>122.300000</longitude>
+				<out_svc>NEVER</out_svc>
+				<name>(climate:0)</name>
+				<city>""</city>
+				<tmyfile>WA-Seattle.tmy2</tmyfile>
+				<temperature>+8.9 degF</temperature>
+				<humidity>+0.96 %</humidity>
+				<solar_flux>+0 W/sf</solar_flux>
+				<solar_direct>+0 W/sf</solar_direct>
+				<solar_diffuse>+0 W/sf</solar_diffuse>
+				<solar_global>+0 W/sf</solar_global>
+				<wind_speed>+0 mph</wind_speed>
+				<wind_dir>+0 deg</wind_dir>
+				<wind_gust>+0 mph</wind_gust>
+				<record.low>+23.002 degF</record.low>
+				<record.low_day>0</record.low_day>
+				<record.high>+98.062 degF</record.high>
+				<record.high_day>0</record.high_day>
+				<record.solar>+95.5274 W/sf</record.solar>
+				<rainfall>+0 in/h</rainfall>
+				<snowdepth>+0 in</snowdepth>
+				<interpolate>NONE</interpolate>
+				<solar_horiz>+0</solar_horiz>
+				<solar_north>+0</solar_north>
+				<solar_northeast>+0</solar_northeast>
+				<solar_east>+0</solar_east>
+				<solar_southeast>+0</solar_southeast>
+				<solar_south>+0</solar_south>
+				<solar_southwest>+0</solar_southwest>
+				<solar_west>+0</solar_west>
+				<solar_northwest>+0</solar_northwest>
+				<solar_raw>+0 W/sf</solar_raw>
+				<ground_reflectivity>+0.3 %</ground_reflectivity>
+			</climate>
+		</climate_list>
+		<weather_list>
+		</weather_list>
+		<csv_reader_list>
+		</csv_reader_list>
+	</climate>
+</gridlabd>

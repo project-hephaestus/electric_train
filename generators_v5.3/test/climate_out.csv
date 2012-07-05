@@ -1,0 +1,12 @@
+# file...... climate_out.csv
+# date...... Tue Jul 03 12:56:27 2012
+# user...... antonia
+# host...... (null)
+# target.... climate 0
+# trigger... (none)
+# interval.. 3600
+# limit..... 120
+# timestamp,temperature,solar_global,solar_direct
+2010-01-01 06:00:00 PST,+28.042,+0,+0
+2010-01-01 07:00:00 PST,+30.022,+0,+0
+2010-01-01 08:00:00 PST,+30.922,+4.36644,+31.1225
