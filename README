@@ -4,7 +4,7 @@ Energy consumption: GridLAB-D class
 
 Both solar train and Energy consumption are components of a C++ project developed for use by Gridlab-D simulation engine.
 
-For details, see hephaestus/docs/Overview.md.
+For details, see docs/Report.docx.
 
 Solar train and Energy consumption are published on Github at https://github.com/project-hephaestus/electric_train;
 
