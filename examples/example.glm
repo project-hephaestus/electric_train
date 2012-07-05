@@ -1,0 +1,135 @@
+// Exercise 5.1
+
+#setenv GLPATH=c:/program files/gridlab-d/lib;c:/program files/gridlab-d/etc;c:/program files/gridlab-d/tmy;c:/program files/gridlab-d/rt
+#set pauseatexit=1
+#set tmp=c:\temp
+#setenv path=c:\mingw\bin
+
+#define stylesheet=http://gridlab-d.svn.sourceforge.net/viewvc/gridlab-d/trunk/core/gridlabd-2_0
+
+
+ 
+module generators;
+module tape;
+module climate;
+module residential {
+     implicit_enduses NONE;
+};
+
+module powerflow {
+     solver_method FBS;
+    // NR_iteration_limit 50;
+};
+
+
+
+
+clock {
+	timezone "PST+8PDT";
+	starttime '2011-08-22 14:00:00';
+	stoptime  '2011-08-22 15:12:00';
+}
+
+
+
+schedule zippwr {
+	* 0-5 *  10-3 * .29307107017222;
+	* 6 *  10-3 * 0.58614214034444;
+	* 7-9 *  10-3 * 0.87921321051666;
+	* 10-15 *  10-3 * 0.58614214034444;
+	* 16 *  10-3 * 0.87921321051666;
+	* 17 *  10-3 * 1.1722842806889;
+	* 18-20 *  10-3 * 1.4653553508611;
+	* 21 *  10-3 * 1.1722842806889;
+	* 22 *  10-3 * 0.58614214034444;
+	* 23 *  10-3 * .29307107017222;
+}
+
+schedule heatspt{
+	* * * * * 60;
+}
+
+schedule coolspt{
+	* * * * * 75;
+}
+
+schedule lighting {
+	* 17-22 * 12-2 * 0.75 // winter
+	* 18-22 * 3-5,9-11 * 0.5 // spring/fall
+	* 19-22 * 6-8 * 0.25 // summer
+}
+
+
+object climate {
+     name Seattle;
+     tmyfile "WA-Seattle.tmy2";
+     interpolate QUADRATIC;
+     
+};
+
+object house{
+		name hvac;
+		window_wall_ratio 0.07;
+		cooling_COP 3.0;
+		system_mode OFF;
+		auxiliary_strategy DEADBAND;
+		heating_system_type HEAT_PUMP;
+		cooling_system_type ELECTRIC;
+		air_temperature 60;
+		mass_temperature 60;
+		heating_setpoint heatspt*1;
+		cooling_setpoint coolspt*1;
+		object recorder{
+			property hvac_power;
+			file "test_HVAC_peak_heat.csv";
+			interval 60;
+			limit 86447;
+		};
+		
+	};
+	
+object lights {
+	name installed-power;
+	installed_power 500 W; 
+	power_fraction 1.0;
+	type CFL; // -> PF = -0.92
+	power_factor -0.92;
+	shape "type: analog; schedule: lighting";
+	
+}
+
+object energy_consumption
+{
+     Energy 400;
+     name energy;
+     number_of_stations 14;
+     speed 27.7;
+     weight 44679;
+     kind 1;
+    
+
+}
+
+     
+ object player {
+          name player;
+          parent energy;
+	  property  elevation;
+	  file elevation.player;
+          loop 10000;
+         
+         
+         };
+         
+ 
+
+         
+object recorder {
+	name recorder;
+	parent energy;
+	property Energy_per;
+	file  energy__per.csv;
+	interval 60;
+	limit 10000;
+}
+
