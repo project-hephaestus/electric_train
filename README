@@ -13,12 +13,7 @@ Dependencies
 
 - The IDE which is used is the Visual Studio
 
-    By default, the build tooling does not build any libraries, that solar train requires.  
-    To build the necessary libraries see hephaestus/third_party and download "cppunit-1.12.0.tar.gz".
-    Unzip and run the downloaded project (for more details see the hephaestus/third_party/install_cppunit) 
-    in order to create the library. Then add this library into your project. Also, you have to download 
-    powerflow and core folders from https://github.com/project-hephaestus/electric_train and place them in the same directory that
-    you have already settle the generators folder that contains the solar train and energy consumption classes.
+By default, the build tooling does not build any libraries, that solar train requires. To build the necessary libraries see hephaestus/third_party and download "cppunit-1.12.0.tar.gz". Unzip and run the downloaded project (for more details see the hephaestus/third_party/install_cppunit) in order to create the library. Then add this library into your project. Also, you have to download powerflow and core folders from https://github.com/project-hephaestus/electric_train and place them in the same directory that you have already settle the generators folder that contains the solar train and energy consumption classes.
 
 - GridLAB-D simulation engine 
 
@@ -30,19 +25,10 @@ Dependencies
 - additional platform specific dependencies:
 
   Windows operating system
-    - MinGW
-    - GNUPlot
-    Both are included in the .exe file. You just need to select them during the installation procedure
+•    MinGW
+•	GNUPlot
+Both are included in the .exe file. You just need to select them during the installation procedure
     
 -Run an example
   
-    After the installation of GridLAB-D has completed, download the contents of examples folder and place them
-    to the same directory.Compile the project that generators folder contains with visual studio and replace the 
-    generators.dll (C:\Program Files\GridLAB-D\lib) with the generators.dll that is produced by the visual studio.  
-    Open the GridLAB-D console, get into the directory where the downloaded items have been placed and run the 
-    example.glm (write in the command line: gridlabd example.glm). Then, following the same procedure, run the 
-    example2.glm.Finally you can modify the station.txt that defines the position of the stations (in terms of klm) 
-    and the elevation.player (the timestamps in this file must be correlated with the simulation time) that contains 
-    the elevation of the route in order to run your own examples.
-
-
+After the installation of GridLAB-D has completed, download the contents of examples folder and place them to the same directory.Compile the project that generators folder contains with visual studio and replace the generators.dll (C:\Program Files\GridLAB-D\lib) with the generators.dll that is produced by the visual studio. Open the GridLAB-D console, get into the directory where the downloaded items have been placed and run the example.glm (write in the command line: gridlabd example.glm). Then, following the same procedure, run the example2.glm.Finally you can modify the station.txt that defines the position of the stations (in terms of klm) and the elevation.player (the timestamps in this file must be correlated with the simulation time) that contains the elevation of the route in order to run your own examples.
