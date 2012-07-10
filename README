@@ -25,8 +25,8 @@ By default, the build tooling does not build any libraries, that solar train req
 - additional platform specific dependencies:
 
   Windows operating system
-•    MinGW
-•	GNUPlot
+• MinGW
+• GNUPlot
 Both are included in the .exe file. You just need to select them during the installation procedure
     
 -Run an example
